@@ -12,16 +12,21 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
  
 	<mvc:annotation-driven />
-	<context:component-scan
-		base-package="com.hrsmanager.controller" />
+	<context:component-scan base-package="com.hrsmanager" />
 	<mvc:default-servlet-handler />
  
-	<bean id="viewResolver"
-		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-		<property name="viewClass"
-			value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/WEB-INF/jsp/" />
-		<property name="suffix" value=".jsp" />
-	</bean>
+    <!-- mapping template tiles -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass" 
+            value="org.springframework.web.servlet.view.tiles3.TilesView" />
+    </bean>
+    
+    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles.xml</value>
+            </list>
+        </property>
+    </bean> 
  
 </beans>
