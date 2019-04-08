@@ -1,0 +1,7 @@
+com\hrsmanager\controller\Login.class
+com\hrsmanager\dao\DepartmentDAO.class
+com\hrsmanager\dao\EmployeeDAO.class
+com\hrsmanager\model\Position.class
+com\hrsmanager\model\Department.class
+com\hrsmanager\model\Employee.class
+com\hrsmanager\dao\PositionDAO.class
