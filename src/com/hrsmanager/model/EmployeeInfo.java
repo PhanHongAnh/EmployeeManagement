@@ -3,7 +3,8 @@ package com.hrsmanager.model;
 import java.sql.Date;
 import java.sql.Timestamp;
 
-public class Employee {
+public class EmployeeInfo {
+
 	private Integer employee_id;
 	private String employee_name;
 	private String gender;
@@ -20,7 +21,7 @@ public class Employee {
 	private Integer department_id;
 	private Integer position_id;
 	
-	public Employee(Integer id, String name,String gender, Date birthday, String phone, String email) {
+	public EmployeeInfo(Integer id, String name,String gender, Date birthday, String phone, String email, String password) {
 		this.employee_id = id;
 		this.employee_name = name;
 		this.gender = gender;
@@ -30,6 +31,7 @@ public class Employee {
 		this.password = id.toString();
 		this.created_at = new Timestamp(System.currentTimeMillis());
 		this.updated_at = this.created_at;
+		this.password = String.valueOf(this.employee_id);
 	}
 	
 	public Integer getEmployeeID() {
