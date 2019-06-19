@@ -7,9 +7,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class Employee {
-	@RequestMapping(value = {"/employee"}, method = RequestMethod.GET)
+	@RequestMapping(value = {"/employees"}, method = RequestMethod.GET)
 	public ModelAndView index() {
-		return new ModelAndView("employee");
+		return new ModelAndView("employees");
 	}
 	
 	@RequestMapping(value = {"/profile"}, method = RequestMethod.GET)
@@ -20,6 +20,11 @@ public class Employee {
 	@RequestMapping(value = {"/editprofile"}, method = RequestMethod.GET)
 	public ModelAndView edit() {
 		return new ModelAndView("editprofile");
+	}
+	
+	@RequestMapping(value = {"/newemployee"}, method = RequestMethod.GET)
+	public ModelAndView add() {
+		return new ModelAndView("newemployee");
 	}
 	
 	@RequestMapping(value = {"/password"}, method = { RequestMethod.GET, RequestMethod.POST })
