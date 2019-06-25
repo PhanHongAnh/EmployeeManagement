@@ -39,5 +39,4 @@ public class Department {
 	public Timestamp getDeletedAt() {
 		return deleted_at;
 	}
-
 }
